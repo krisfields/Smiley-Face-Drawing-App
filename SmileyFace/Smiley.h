@@ -1,0 +1,15 @@
+//
+//  Smiley.h
+//  SmileyFace
+//
+//  Created by Diana Zmuda on 8/21/12.
+//  Copyright (c) 2012 Diana Zmuda. All rights reserved.
+//
+
+#import <UIKit/UIKit.h>
+
+@interface Smiley : UIView
+
+@property (strong, nonatomic) UIColor* color;
+
+@end
