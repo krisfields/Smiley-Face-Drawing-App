@@ -21,6 +21,7 @@
 		84CC048615E4601C0010B171 /* TouchDrawView.m in Sources */ = {isa = PBXBuildFile; fileRef = 84CC048515E4601B0010B171 /* TouchDrawView.m */; };
 		84CC04BB15E5704D0010B171 /* Circle.m in Sources */ = {isa = PBXBuildFile; fileRef = 84CC04BA15E5704D0010B171 /* Circle.m */; };
 		84CC04BE15E589850010B171 /* ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84CC04BD15E589850010B171 /* ViewController.xib */; };
+		84CC04C215E5B20A0010B171 /* FreeForm.m in Sources */ = {isa = PBXBuildFile; fileRef = 84CC04C115E5B2090010B171 /* FreeForm.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -50,6 +51,8 @@
 		84CC04BA15E5704D0010B171 /* Circle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Circle.m; sourceTree = "<group>"; };
 		84CC04BD15E589850010B171 /* ViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ViewController.xib; sourceTree = "<group>"; };
 		84CC04BF15E58B1C0010B171 /* ShapesProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ShapesProtocol.h; sourceTree = "<group>"; };
+		84CC04C015E5B2090010B171 /* FreeForm.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FreeForm.h; sourceTree = "<group>"; };
+		84CC04C115E5B2090010B171 /* FreeForm.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FreeForm.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,6 +111,8 @@
 				84CC048215E45F190010B171 /* Line.m */,
 				84CC04B915E5704D0010B171 /* Circle.h */,
 				84CC04BA15E5704D0010B171 /* Circle.m */,
+				84CC04C015E5B2090010B171 /* FreeForm.h */,
+				84CC04C115E5B2090010B171 /* FreeForm.m */,
 				84CC04BF15E58B1C0010B171 /* ShapesProtocol.h */,
 				84CC048415E4601B0010B171 /* TouchDrawView.h */,
 				84CC048515E4601B0010B171 /* TouchDrawView.m */,
@@ -202,6 +207,7 @@
 				84CC048315E45F1A0010B171 /* Line.m in Sources */,
 				84CC048615E4601C0010B171 /* TouchDrawView.m in Sources */,
 				84CC04BB15E5704D0010B171 /* Circle.m in Sources */,
+				84CC04C215E5B20A0010B171 /* FreeForm.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

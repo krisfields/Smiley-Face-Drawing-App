@@ -10,12 +10,10 @@
 
 @protocol ShapesProtocol <NSObject>
 
-@property (strong, nonatomic) UIView *currentView;
+@property (weak, nonatomic) UIView *currentView;
 
 -(void)drawShape:(CGContextRef)context;
-
 -(void)beginTouches:(NSSet*)points;
-
 -(void)movedTouchPoint:(NSSet*)points;
 
 @end

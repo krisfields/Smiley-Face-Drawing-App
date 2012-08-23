@@ -18,6 +18,7 @@
     self = [super initWithFrame:frame];
     if (self) {
         self.completeShapes = [[NSMutableArray alloc] init];
+        self.currentShapeType = @"line";
         self.backgroundColor = [UIColor colorWithRed:0 green:0 blue:0 alpha:0];
         [self setMultipleTouchEnabled:YES];
     }
@@ -35,16 +36,10 @@
         [shape drawShape:context];
     }
     
-    //draw current line
+    //draw current shape
     if (self.currentShape) {
         [self.currentShape drawShape:context];
     }
-}
-
--(void)clearAll
-{
-    [self.completeShapes removeAllObjects];
-    [self setNeedsDisplay];
 }
 
 -(void)touchesBegan:(NSSet*)touches withEvent:(UIEvent *)event
@@ -57,23 +52,24 @@
     if ([self.currentShapeType isEqualToString:@"circle"]) {
         self.currentShape = [Circle new];
     }
+    if ([self.currentShapeType isEqualToString:@"freeform"]) {
+        self.currentShape = [Line new];
+    }
     self.currentShape.currentView = self;
     [self.currentShape beginTouches:touches];
     [self setNeedsDisplay];
-        
-//        CGPoint loc = [t locationInView:self];
-//        Line *newLine = [[Line alloc] init];
-//        
-//        //set the start point and end point as the same place here (change end in touches moved)
-//        [newLine setBegin:loc];
-//        [newLine setEnd:loc];
-//        self.currentShape = newLine;
     
 }
 
 -(void)touchesMoved:(NSSet*)touches withEvent:(UIEvent *)event
 {
     [self.currentShape movedTouchPoint:touches];
+    if ([self.currentShapeType isEqualToString:@"freeform"]) {
+        [self.completeShapes addObject:self.currentShape];
+        self.currentShape = [Line new];
+        self.currentShape.currentView = self;
+        [self.currentShape beginTouches:touches];
+    }
     [self setNeedsDisplay];
 }
 
@@ -93,6 +89,15 @@
 -(void)touchesCancelled:(NSSet *)touches withEvent:(UIEvent *)event
 {
     [self endTouches:touches];
+}
+
+-(void)clearAll
+{
+    //delete everything
+    [self.completeShapes removeAllObjects];
+    self.currentShape = nil;
+    //reinitialize
+    [self setNeedsDisplay];
 }
 
 @end

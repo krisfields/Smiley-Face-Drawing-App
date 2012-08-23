@@ -18,6 +18,6 @@
 -(void)beginTouches:(NSSet*)points;
 -(void)movedTouchPoint:(NSSet*)points;
 
-@property (strong, nonatomic) UIView *currentView;
+@property (weak, nonatomic) UIView *currentView;
 
 @end

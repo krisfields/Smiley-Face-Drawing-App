@@ -10,12 +10,11 @@
 
 @interface ViewController : UIViewController
 
-- (IBAction)goateeButton;
-
 @property (weak, nonatomic) IBOutlet UIToolbar *toolBar;
 
 - (IBAction)linesButton:(UIBarButtonItem *)sender;
 - (IBAction)circleButton:(UIBarButtonItem *)sender;
 - (IBAction)freeFormButton:(UIBarButtonItem *)sender;
+- (IBAction)goateeToggle:(UIBarButtonItem *)sender;
 
 @end

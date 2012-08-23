@@ -1,5 +1,5 @@
 //
-//  Circle.h
+//  FreeForm.h
 //  SmileyFace
 //
 //  Created by Diana Zmuda on 8/22/12.
@@ -9,7 +9,7 @@
 #import <Foundation/Foundation.h>
 #import "ShapesProtocol.h"
 
-@interface Circle : NSObject <ShapesProtocol>
+@interface FreeForm : NSObject <ShapesProtocol>
 
 @property (nonatomic) CGPoint begin;
 @property (nonatomic) CGPoint end;

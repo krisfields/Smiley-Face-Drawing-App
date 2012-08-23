@@ -35,7 +35,7 @@
     [super viewDidLoad];
     self.hasGoatee = NO;
     
-    CGRect faceFrame = CGRectMake(0, 0, 320, 320);
+    CGRect faceFrame = CGRectMake(0, 0, 320, 415);
     Smiley *faceView = [[Smiley alloc] initWithFrame:faceFrame];
     faceView.color = [UIColor yellowColor];
     [self.view addSubview:faceView];
@@ -55,7 +55,7 @@
     [faceView addSubview:self.goateeView];
     self.goateeView.hidden = YES;
     
-    CGRect drawFrame = CGRectMake(0, 0, 320, 320);
+    CGRect drawFrame = CGRectMake(0, 0, 320, 415);
     self.drawView = [[TouchDrawView alloc] initWithFrame:drawFrame];
     //this will overlay everything, including the button!!!
     [faceView addSubview:self.drawView];
@@ -78,13 +78,7 @@
     return (interfaceOrientation == UIInterfaceOrientationPortrait);
 }
 
-- (IBAction)goateeButton {
-    if (self.goateeView.hidden) {
-        self.goateeView.hidden = NO;
-    } else {
-        self.goateeView.hidden = YES;
-    }
-}
+
 
 - (IBAction)linesButton:(UIBarButtonItem *)sender {
     self.drawView.currentShapeType = @"line";
@@ -97,6 +91,37 @@
 
 - (IBAction)freeFormButton:(UIBarButtonItem *)sender {
     self.drawView.currentShapeType = @"freeform";
+}
+
+- (IBAction)goateeToggle:(UIBarButtonItem *)sender {
+    if (self.goateeView.hidden) {
+        self.goateeView.hidden = NO;
+    } else {
+        self.goateeView.hidden = YES;
+    }
+}
+
+-(void)motionBegan:(UIEventSubtype)motion withEvent:(UIEvent *)event
+{
+    NSLog(@"called");
+    if (event.type == UIEventSubtypeMotionShake )
+    {
+        NSLog(@"1");
+        [self.drawView clearAll];
+    }
+}
+
+//this stuff is so the shake gesture will work
+-(BOOL)canBecomeFirstResponder
+{
+    return YES;
+}
+
+-(void)viewDidAppear:(BOOL)animated
+{
+    //you must make the view first responder
+    [self becomeFirstResponder];
+    NSLog(@"called viewdidappaearrerere");
 }
 
 @end
