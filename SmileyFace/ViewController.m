@@ -101,6 +101,10 @@
     }
 }
 
+- (IBAction)TriangleButton:(id)sender {
+    self.drawView.currentShapeType = @"triangle";
+}
+
 -(void)motionBegan:(UIEventSubtype)motion withEvent:(UIEvent *)event
 {
     NSLog(@"called");

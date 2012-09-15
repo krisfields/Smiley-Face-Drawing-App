@@ -10,6 +10,7 @@
 #import "Line.h"
 #import "Circle.h"
 #import "ShapesProtocol.h"
+#import "Triangle.h"
 
 @implementation TouchDrawView
 
@@ -54,6 +55,9 @@
     }
     if ([self.currentShapeType isEqualToString:@"freeform"]) {
         self.currentShape = [Line new];
+    }
+    if ([self.currentShapeType isEqualToString:@"triangle"]) {
+        self.currentShape = [Triangle new];
     }
     self.currentShape.currentView = self;
     [self.currentShape beginTouches:touches];

@@ -16,5 +16,6 @@
 - (IBAction)circleButton:(UIBarButtonItem *)sender;
 - (IBAction)freeFormButton:(UIBarButtonItem *)sender;
 - (IBAction)goateeToggle:(UIBarButtonItem *)sender;
+- (IBAction)TriangleButton:(id)sender;
 
 @end

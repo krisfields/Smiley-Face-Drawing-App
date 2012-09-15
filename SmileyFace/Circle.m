@@ -26,13 +26,29 @@
     NSEnumerator *enumerator = [points objectEnumerator];
     self.begin = [enumerator.nextObject locationInView:self.currentView];
     self.end = [enumerator.nextObject locationInView:self.currentView];
+    if ([points count] == 1){
+        self.end = self.begin;
+    }
 
 }
 
 -(void)movedTouchPoint:(NSSet*)points {
     NSEnumerator *enumerator = [points objectEnumerator];
-    self.begin = [enumerator.nextObject locationInView:self.currentView];
-    self.end = [enumerator.nextObject locationInView:self.currentView];
+
+    CGPoint point1 = [enumerator.nextObject locationInView:self.currentView];
+    CGPoint point2 = [enumerator.nextObject locationInView:self.currentView];
+    if ([points count] == 1) {
+        if (CGPointEqualToPoint(self.begin, point1)) {
+            self.end = point1;
+        }else{
+            self.begin = point1;
+        }
+    }else{
+        self.begin = point1;
+        self.end = point2;
+    }
+//    self.begin = [enumerator.nextObject locationInView:self.currentView];
+//    self.end = [enumerator.nextObject locationInView:self.currentView];
 }
 
 @end

@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		160B4D8715E67ACF0024AD28 /* smiley_face.png in Resources */ = {isa = PBXBuildFile; fileRef = 160B4D8615E67ACF0024AD28 /* smiley_face.png */; };
+		166ECED515E5CA4C00FE979D /* Triangle.m in Sources */ = {isa = PBXBuildFile; fileRef = 166ECED415E5CA4C00FE979D /* Triangle.m */; };
 		84CC043115E408AA0010B171 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84CC043015E408AA0010B171 /* UIKit.framework */; };
 		84CC043315E408AA0010B171 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84CC043215E408AA0010B171 /* Foundation.framework */; };
 		84CC043515E408AA0010B171 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84CC043415E408AA0010B171 /* CoreGraphics.framework */; };
@@ -25,6 +27,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		160B4D8615E67ACF0024AD28 /* smiley_face.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = smiley_face.png; sourceTree = "<group>"; };
+		166ECED315E5CA4C00FE979D /* Triangle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Triangle.h; sourceTree = "<group>"; };
+		166ECED415E5CA4C00FE979D /* Triangle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Triangle.m; sourceTree = "<group>"; };
 		84CC042C15E408AA0010B171 /* SmileyFace.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SmileyFace.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		84CC043015E408AA0010B171 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		84CC043215E408AA0010B171 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -72,6 +77,7 @@
 		84CC042115E408A90010B171 = {
 			isa = PBXGroup;
 			children = (
+				160B4D8615E67ACF0024AD28 /* smiley_face.png */,
 				84CC043615E408AA0010B171 /* SmileyFace */,
 				84CC042F15E408AA0010B171 /* Frameworks */,
 				84CC042D15E408AA0010B171 /* Products */,
@@ -117,6 +123,8 @@
 				84CC048415E4601B0010B171 /* TouchDrawView.h */,
 				84CC048515E4601B0010B171 /* TouchDrawView.m */,
 				84CC047615E437860010B171 /* ViewController.h */,
+				166ECED315E5CA4C00FE979D /* Triangle.h */,
+				166ECED415E5CA4C00FE979D /* Triangle.m */,
 				84CC047715E437860010B171 /* ViewController.m */,
 				84CC04BD15E589850010B171 /* ViewController.xib */,
 				84CC043715E408AA0010B171 /* Supporting Files */,
@@ -188,6 +196,7 @@
 			files = (
 				84CC043B15E408AA0010B171 /* InfoPlist.strings in Resources */,
 				84CC04BE15E589850010B171 /* ViewController.xib in Resources */,
+				160B4D8715E67ACF0024AD28 /* smiley_face.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -208,6 +217,7 @@
 				84CC048615E4601C0010B171 /* TouchDrawView.m in Sources */,
 				84CC04BB15E5704D0010B171 /* Circle.m in Sources */,
 				84CC04C215E5B20A0010B171 /* FreeForm.m in Sources */,
+				166ECED515E5CA4C00FE979D /* Triangle.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
